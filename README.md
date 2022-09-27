@@ -171,7 +171,7 @@ if __name__=="__main__":
 
 #데이터 흐름도
     
-    ![흐름도](https://user-images.githubusercontent.com/30867895/192447611-390e2ffd-9679-4d26-9f46-aa6a49407fe1.png)
+![흐름도](https://user-images.githubusercontent.com/30867895/192447611-390e2ffd-9679-4d26-9f46-aa6a49407fe1.png)
 
     
 
