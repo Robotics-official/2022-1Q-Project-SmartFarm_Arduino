@@ -1,5 +1,5 @@
 # SmartFarm
-# 전민재 Doing
+![KakaoTalk_20220902_080730949](https://user-images.githubusercontent.com/30867895/192447758-6058c037-f596-4746-8520-d2e0adc8724a.jpg)
 
 ```python
 # client용 py
@@ -158,7 +158,8 @@ if __name__=="__main__":
 
 read/uuid 실행했을 때 device와 app이 얻는 json
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/82d7bd5e-4565-42ce-8597-81b00b4c51af/Untitled.png)
+![Untitled (1)](https://user-images.githubusercontent.com/30867895/192447948-5b654315-01f5-4ee8-bc5f-d1d433b02cf2.png)
+
 
 1. 고유번호를 지정하기보다 포트번호로 특정데이터를 지정하는 것으로 구현하였습니다.
 2. 라즈베리파이나 앱에서 데이터를 받아쓸 때 특정 값만 받는것이 아니라 전체데이터에 접근할 수 있도록 하여 필요한 데이터를 꺼내쓰도록 하였습니다. 
@@ -166,7 +167,8 @@ read/uuid 실행했을 때 device와 app이 얻는 json
 4. Userid 경우 형식상 써놓은 것으로 아무 숫자나 사용해도 됩니다.(없으면 안됌)
 5. 그래프 기능은 힘들어서 안할래
     
-    ![흐름도.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8a0c325a-cc94-44ae-9428-bd68a03734cc/%ED%9D%90%EB%A6%84%EB%8F%84.png)
+    ![흐름도](https://user-images.githubusercontent.com/30867895/192447611-390e2ffd-9679-4d26-9f46-aa6a49407fe1.png)
+
     
 
 1. 앱에서 서버로 모듈 추가를 요청할 수 있습니다. 요청시 추가할 사용할 센서, 센서를 꽂을 포트번호, 사용자를 구별할 수 있는 유저 아이디를 json형식으로 함께 전달합니다. 모듈 삭제, 모듈 제어도 요청할 수 있습니다.
@@ -185,7 +187,8 @@ json={ "case":1, "port":2, "switch":False,"value":0,"value2":0})
 
 서버에서는 각 Your Farm사용자의 데이터를 관리할 수 있는 관제센터기능을 제공합니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8304c13-ccee-453c-9d2b-e38a4f86caec/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/30867895/192447857-106d5cd4-9284-4cf7-a5d9-02306fac60a8.png)
+
 
 앱을 사용하기 어려운 상황이나 디바이스 제어에 문제가 있을 때 YourFarm관제센터에 접근하여 문제를 해결할 수 있을 것입니다.
 
