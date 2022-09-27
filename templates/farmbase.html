@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <div style="margin-top:50px;" class="ui container">
+    <h1  class="ui center alighned header">Your Farm App</h1>
+
+    <hr>
+
+    {% for todo in todo_list %}
+    <div class="ui segment">
+        <p class="ui big header">TaskPrimaryid : {{todo.id }} | Userid : {{todo.Userid }} | Caseid :  {{ todo.Caseid }} | Portid : {{todo.Portid}}</p>
+    {% if todo.Switch == False %}
+    <span class="ui gray label">OFF</span>
+    {% else %}
+    <span class="ui green label">ON</span>
+    {% endif %}
+    
+    <p class="ui big header">value = {{todo.Value }}</p>
+    <p class="ui big header">value2 = {{ todo.Value2 }}</p>
+
+    <a class="ui blue button" href="/switch/{{todo.Userid}}/{{todo.Portid}}">Switch</a>
+    <a class="ui red button" href="/delete/{{todo.Userid}}/{{ todo.Portid }}">Delete</a>
+    </div>
+    {% endfor %}
+    </div>
+</body>
+
+</html>
