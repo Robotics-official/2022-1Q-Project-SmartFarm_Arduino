@@ -1,6 +1,6 @@
 # SmartFarm
 ![KakaoTalk_20220902_080730949](https://user-images.githubusercontent.com/30867895/192447758-6058c037-f596-4746-8520-d2e0adc8724a.jpg)
-##client용 코드
+## client용 코드
 앱과 device측에서 서버에 요청할 때 필요한 코드가 작성되어있습니다.
 ```python
 # client용 py
@@ -33,7 +33,7 @@ res = requests.post(f'http://http://34.64.235.122//update/{userid}/{portid}', js
 
 ```
 
-##DB
+## DB
 저장되는 데이터 형식을 지정하였습니다.
 ```python
 
@@ -56,7 +56,7 @@ class Todo(db.Model):
     Value2=db.Column(db.Integer)
 ```
 
-##서버
+## 서버
 서버는 flask로 구현하였습니다.
 ```python
 from flask import Flask, render_template,request, redirect,url_for,jsonify
@@ -161,18 +161,18 @@ if __name__=="__main__":
 
 ```
 
-##read/uuid 실행했을 때 device와 app이 얻는 json
+## read/uuid 실행했을 때 device와 app이 얻는 json
 
 ![Untitled (1)](https://user-images.githubusercontent.com/30867895/192447948-5b654315-01f5-4ee8-bc5f-d1d433b02cf2.png)
 
 
-##구현 아이디어
+## 구현 아이디어
 1. 고유번호를 지정하기보다 포트번호로 특정데이터를 지정하는 것으로 구현하였습니다.
 2. 라즈베리파이나 앱에서 데이터를 받아쓸 때 특정 값만 받는것이 아니라 전체데이터에 접근할 수 있도록 하여 필요한 데이터를 꺼내쓰도록 하였습니다. 
 3. 앱이나 라즈베리파이에서 서버로 데이터를 보낼때는 장치추가의 경우를 제외하고는 데이터셋의 형식을 맞출 필요가 없습니다.
 4. Userid 경우 형식상 써놓은 것이나 추후 개발로 사용자들을 구별하는 용도로 사용할 수 있습니다.(없으면 안됌)
 
-##데이터 흐름도
+## 데이터 흐름도
     
 ![흐름도](https://user-images.githubusercontent.com/30867895/192447611-390e2ffd-9679-4d26-9f46-aa6a49407fe1.png)
 
@@ -191,7 +191,7 @@ json={ "case":1, "port":2, "switch":False,"value":0,"value2":0})
 4. 작동하는 모듈로부터 나오는 데이터들을 모아 서버로 전달해 서버의 DB를 최신화시킵니다.
 5. 앱에서 서버의 최신화된 DB를 전달받아 사용자가 보기 쉽도록 스마트팜의 상태를 출력해줍니다.
 
-#서버에서는 각 Your Farm사용자의 데이터를 관리할 수 있는 관제센터기능을 제공합니다.
+# 서버에서는 각 Your Farm사용자의 데이터를 관리할 수 있는 관제센터기능을 제공합니다.
 
 ![Untitled](https://user-images.githubusercontent.com/30867895/192447857-106d5cd4-9284-4cf7-a5d9-02306fac60a8.png)
 
